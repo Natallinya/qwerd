@@ -1,0 +1,37 @@
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 180px;
+    height: 180px;
+    border: 1px solid darkgrey;
+}
+.board__cell {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+.board__cell::after {
+     content: "";
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     right: 0px;
+     bottom: 0px;
+     border: 1px solid  darkgrey;
+     z-index: -1;
+ }
+.board__cell:hover {
+     background-color: darkgrey;
+ }
